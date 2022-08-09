@@ -7,7 +7,9 @@ score.textContent = `Player: ${playerScore} computer: ${computerScore}`;
 const buttons = document.querySelectorAll('.button');
 for(let button of buttons){
     button.addEventListener('click', () => playRound(button.getAttribute('id'), getComputerChoice()));
-}
+}  
+
+
 
 function updateScore(){
     score.textContent = `Player: ${playerScore} computer: ${computerScore}`;
