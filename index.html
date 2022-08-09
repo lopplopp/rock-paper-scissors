@@ -3,10 +3,49 @@
     <head>
         <meta charset="utf-8">
         <title>Rock Paper Scissors</title>
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="./style.css">
     </head>
 
     <body>
+        <div class="top">
+            <h1 class = "title">Rock Paper Scissor</h1>
+            <ul class="rule"><h2>Game Rule</h2>
+                <li>Pick one of the following</li>
+                <li>Rock beat Scissor, Paper beat rock, Scissor beat paper</li>
+                <li>First to five win</li>
+        </div>
 
+        <div class = "body">
+            <div class = "leftBody">
+                <h2>Player</h2>
+                <div class="choice">
+                    <div class="button" id="rock">
+                        <img class="playerButton" src="./img/rock.png" alt="rock" >
+                    </div>
+                    <div class="button" id="paper">
+                        <img class="playerButton" src="./img/paper.png" alt="paper">
+                    </div>
+                    <div class="button" id="scissor">
+                        <img class="playerButton" src="./img/scissors.png" alt="scissors">
+                    </div>
+                </div>
+            </div>
+
+            <div class = "rightBody">
+                <h2>Computer</h2>
+                <div class="choice">
+                    <img class="CPUButton" id="rock" src="./img/rock.png" alt="rock">
+                    <img class="CPUButton" id="paper" src="./img/paper.png" alt="paper">
+                    <img class="CPUButton" id="scissor" src="./img/scissors.png" alt="scissors">
+                </div>
+            </div>
+        </div>
+
+            <div class="result">
+                <h1>Score</h1>
+                <p id="score"></p>
+                <p id="roundResult"></p>
+            </div>
     </body>
 </html>
