@@ -96,3 +96,8 @@ button{
     border-radius: 8px;
     background-color: lightblue;
 }
+
+.select{
+    border: 5px groove blue;
+    background-color: rgb(66, 164, 182);
+}

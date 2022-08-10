@@ -11,6 +11,8 @@ for(let button of buttons){
 
 
 
+
+
 function updateScore(){
     score.textContent = `Player: ${playerScore} computer: ${computerScore}`;
 }
@@ -82,8 +84,28 @@ function winner(){
     }
 }
 
+function addSelect(playerSelection, computerSelection){
+    console.log(buttons);
+    for(let button of buttons){
+        button.classList.remove('select');
+        if(button.id == playerSelection){
+            button.classList.add('select');
+        }
+    }
+
+    const imgs = document.querySelectorAll('.CPUButton');
+    for(let img of imgs){
+        img.classList.remove('select');
+        if(img.id == computerSelection){
+            img.classList.add('select');
+        }
+    }
+}
+
+
 function playRound(playerSelection, computerSelection){
     if(endGame())restart();
+    addSelect(playerSelection, computerSelection);
     console.log(playerSelection, computerSelection);
     if(playerSelection === computerSelection){
         roundResult.textContent = `Tie Game`;
